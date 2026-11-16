@@ -1,0 +1,5 @@
+subnet_id,district_name,ip_prefix,cidr,gateway_node,gateway_ip,gateway_mac
+Subnet_A,Downtown_Commercial,192.168.1.0,24,G_A,192.168.1.1,00:50:56:A1:00:01
+Subnet_B,Tech_Enterprise_Park,192.168.2.0,24,G_B,192.168.2.1,00:50:56:B1:00:01
+Subnet_C,University_Research,192.168.3.0,24,G_C,192.168.3.1,00:50:56:C1:00:01
+Subnet_D,Harbor_Logistics,192.168.4.0,24,G_D,192.168.4.1,00:50:56:D1:00:01

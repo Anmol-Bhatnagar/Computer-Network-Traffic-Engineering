@@ -1,0 +1,6 @@
+vehicleid,road1,road2,prioritylevel,packet_count,packet_size
+EMG_01,A2,D3,High,5,128
+EMG_02,C4,B3,High,8,128
+EMG_03,B4,A4,Medium,10,256
+EMG_04,D2,A2,High,4,128
+EMG_05,C2,D4,Medium,6,256

@@ -1,0 +1,86 @@
+CROSS-DOMAIN FLOW SIMULATOR  —  Hypothesis Evaluation Report
+JIIT Computer Networks 24B15CS313
+Generated: Nov 16 2026 20:44:17
+Simulation: 2000 ticks per scenario, 24 scenarios total
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+H1: Max-Pressure vs Fixed-Time
+    Hypothesis: Max-Pressure gradient transfer improves throughput
+    and reduces delay in BOTH vehicular and network domains.
+
+    Load=Low (rho=0.3):
+      Vehicular throughput:  Fixed=187.0 veh/1000t  MaxP=195.0 veh/1000t  GAIN=+4.3%
+      Network throughput:    Fixed=189.0 pkt/1000t  MaxP=195.0 pkt/1000t  GAIN=+3.2%
+      Mean vehicle delay:    Fixed=79.2t  MaxP=148.5t  REDUCTION=-46.6%
+      Mean vehicle queue:    Fixed=1.1  MaxP=2.5  REDUCTION=-56.3%
+    Load=Medium (rho=0.8):
+      Vehicular throughput:  Fixed=421.5 veh/1000t  MaxP=416.0 veh/1000t  GAIN=-1.3%
+      Network throughput:    Fixed=424.0 pkt/1000t  MaxP=416.0 pkt/1000t  GAIN=-1.9%
+      Mean vehicle delay:    Fixed=81.1t  MaxP=120.3t  REDUCTION=-32.5%
+      Mean vehicle queue:    Fixed=2.4  MaxP=3.8  REDUCTION=-38.4%
+    Load=High (rho=1.2):
+      Vehicular throughput:  Fixed=686.5 veh/1000t  MaxP=679.5 veh/1000t  GAIN=-1.0%
+      Network throughput:    Fixed=684.0 pkt/1000t  MaxP=679.5 pkt/1000t  GAIN=-0.7%
+      Mean vehicle delay:    Fixed=85.0t  MaxP=101.9t  REDUCTION=-16.6%
+      Mean vehicle queue:    Fixed=3.9  MaxP=4.9  REDUCTION=-19.4%
+
+H2: CoLight (cooperative) vs Max-Pressure (local)
+    Hypothesis: Sharing neighbour queue info further improves flow.
+
+    Load=Low:
+      Veh throughput delta:  -4.1%
+      Net throughput delta:  -4.1%
+      Jain Fairness (Veh):   MaxP=0.945  CoLight=0.935  DELTA=-0.010
+      Jain Fairness (Net):   MaxP=0.945  CoLight=0.935  DELTA=-0.010
+    Load=Medium:
+      Veh throughput delta:  -54.8%
+      Net throughput delta:  -54.8%
+      Jain Fairness (Veh):   MaxP=0.992  CoLight=0.554  DELTA=-0.438
+      Jain Fairness (Net):   MaxP=0.992  CoLight=0.554  DELTA=-0.438
+    Load=High:
+      Veh throughput delta:  -60.9%
+      Net throughput delta:  -60.9%
+      Jain Fairness (Veh):   MaxP=0.996  CoLight=0.423  DELTA=-0.573
+      Jain Fairness (Net):   MaxP=0.996  CoLight=0.423  DELTA=-0.573
+
+H3: Link Failure Recovery
+    Hypothesis: Pressure-based controllers recover faster from link failure.
+
+    Load=Medium (link B-C severed):
+      Fixed-Time      PeakQ=8      MeanQ=2.6     Recovery=101 ticks  Throughput=425.5 pkt/1000t
+      Max-Pressure    PeakQ=13     MeanQ=3.8     Recovery=101 ticks  Throughput=415.5 pkt/1000t
+      CoLight         PeakQ=12     MeanQ=3.3     Recovery=101 ticks  Throughput=419.5 pkt/1000t
+      Predictive      PeakQ=13     MeanQ=3.8     Recovery=101 ticks  Throughput=415.5 pkt/1000t
+    Load=High (link B-C severed):
+      Fixed-Time      PeakQ=10     MeanQ=4.1     Recovery=101 ticks  Throughput=685.5 pkt/1000t
+      Max-Pressure    PeakQ=19     MeanQ=5.2     Recovery=101 ticks  Throughput=683.0 pkt/1000t
+      CoLight         PeakQ=19     MeanQ=5.9     Recovery=101 ticks  Throughput=683.5 pkt/1000t
+      Predictive      PeakQ=19     MeanQ=5.2     Recovery=101 ticks  Throughput=683.0 pkt/1000t
+
+H4: Predictive vs Max-Pressure
+    Hypothesis: Predictive anticipation reduces peak queue buildup.
+
+    Load=Low:
+      Peak Veh Queue:  MaxP=11  Pred=11  DELTA=+0.0%
+      Peak Net Queue:  MaxP=11  Pred=11  DELTA=+0.0%
+      Queue Stability (stddev): MaxP=1.76  Pred=1.76  DELTA=+0.00%
+    Load=Medium:
+      Peak Veh Queue:  MaxP=21  Pred=21  DELTA=+0.0%
+      Peak Net Queue:  MaxP=21  Pred=21  DELTA=+0.0%
+      Queue Stability (stddev): MaxP=3.14  Pred=3.14  DELTA=+0.00%
+    Load=High:
+      Peak Veh Queue:  MaxP=17  Pred=17  DELTA=+0.0%
+      Peak Net Queue:  MaxP=17  Pred=17  DELTA=+0.0%
+      Queue Stability (stddev): MaxP=3.22  Pred=3.22  DELTA=+0.00%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OVERALL RANKING (High Load, Normal Topology)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  #1  Fixed-Time      Net Throughput=684.0000/1000t  Mean Veh Delay=85.0t  Jain Fairness=0.997
+  #2  Max-Pressure    Net Throughput=679.5000/1000t  Mean Veh Delay=101.9t  Jain Fairness=0.996
+  #3  Predictive      Net Throughput=679.5000/1000t  Mean Veh Delay=101.9t  Jain Fairness=0.996
+  #4  CoLight         Net Throughput=265.5000/1000t  Mean Veh Delay=39.6t  Jain Fairness=0.423
+
+Files: raw_ticks.csv (48000 rows), summary.csv (24 rows), summary.json

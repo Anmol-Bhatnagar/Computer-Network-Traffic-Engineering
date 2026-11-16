@@ -1,0 +1,11 @@
+vehicleid,road1,road2,protocol,packet_count,packet_size,priority,retrans_mode
+V001,A2,B3,TCP,20,1024,Standard,GoBackN
+V002,A3,C3,TCP,15,1460,Standard,SelectiveRepeat
+V003,B2,D3,UDP,30,512,VoiceVideo,None
+V004,C2,A4,TCP,10,1024,Standard,StopAndWait
+V005,D2,B3,UDP,25,256,Standard,None
+V006,A2,A4,TCP,12,1024,Standard,GoBackN
+V007,B4,C2,TCP,18,1460,Standard,SelectiveRepeat
+V008,C3,D2,UDP,40,512,Streaming,None
+V009,D4,A3,TCP,16,1024,Standard,GoBackN
+V010,G_A,G_B,TCP,50,1460,Backbone,GoBackN

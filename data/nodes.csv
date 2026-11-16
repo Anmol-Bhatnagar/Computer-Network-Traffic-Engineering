@@ -1,0 +1,17 @@
+node_id,subnet_id,node_type,ip_address,mac_address,buffer_capacity
+G_A,Subnet_A,Gateway,192.168.1.1,00:50:56:A1:00:01,100
+A2,Subnet_A,Client,192.168.1.10,00:50:56:A1:00:10,50
+A3,Subnet_A,Client,192.168.1.11,00:50:56:A1:00:11,50
+A4,Subnet_A,Server,192.168.1.20,00:50:56:A1:00:20,150
+G_B,Subnet_B,Gateway,192.168.2.1,00:50:56:B1:00:01,100
+B2,Subnet_B,Client,192.168.2.10,00:50:56:B1:00:10,50
+B3,Subnet_B,Server,192.168.2.20,00:50:56:B1:00:20,150
+B4,Subnet_B,Client,192.168.2.11,00:50:56:B1:00:11,50
+G_C,Subnet_C,Gateway,192.168.3.1,00:50:56:C1:00:01,100
+C2,Subnet_C,Client,192.168.3.10,00:50:56:C1:00:10,50
+C3,Subnet_C,Server,192.168.3.20,00:50:56:C1:00:20,150
+C4,Subnet_C,Client,192.168.3.11,00:50:56:C1:00:11,50
+G_D,Subnet_D,Gateway,192.168.4.1,00:50:56:D1:00:01,100
+D2,Subnet_D,Client,192.168.4.10,00:50:56:D1:00:10,50
+D3,Subnet_D,Server,192.168.4.20,00:50:56:D1:00:20,150
+D4,Subnet_D,Client,192.168.4.11,00:50:56:D1:00:11,50
